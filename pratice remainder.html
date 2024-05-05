@@ -1,0 +1,55 @@
+<!DOCTYPE html><html>
+  <head><title>Remaninder</title></head>
+<body>
+<p>Enter the Task</p>
+<input placeholder="Enter the Task" class="task">
+<input type="date" class="duedate">
+<button onclick="add()">ADD</button>
+<div class="displayvalue"> </div>
+ 
+ <script>
+  let array=[{name:'Watch TV' , 
+              duedate:'2022-02-23'}, {
+              name:'Watch YouTube',
+              duedate:'2022-02-25'},]
+function newvalue(){
+  let result = ''
+  for (let i=0; i<array.length; i++){
+  const demo2object = array[i]
+  const arrayname = demo2object.name
+  const arraydate = demo2object.duedate
+  const html = `
+  <div>
+    <div>
+      ${arrayname}
+    </div> 
+    <div>
+      ${arraydate}
+    </div>
+
+     <button onclick = "array.splice(${i}, 1)
+                        newvalue()">Delete</button>
+
+  </div>
+  `
+   result += html
+
+}
+document.querySelector('.displayvalue').innerHTML = result
+}
+
+function add(){
+  const demo = document.querySelector('.task')
+  const ddemo2  = document.querySelector('.duedate')
+  const name = demo.value
+  const duedate = ddemo2.value
+  array.push({name: name, duedate:duedate})
+  demo.value=''
+  console.log(array)
+  newvalue()
+}
+
+
+ </script>
+</body>
+</html>

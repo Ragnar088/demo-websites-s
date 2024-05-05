@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remaninder</title>
+  </head>
+  <body>
+    <p>Task Remember</p>
+    <input placeholder="Enter The Task" class="searchbar">
+    <input type="date" class="date">
+    <button onclick="add()" class="addbutton">Add</button>
+    <div class="valuedisplay"></div>
+  <script>
+  const array=[
+    {name:'Make Dinner',duedate: '2024-11-20'},
+    {name:'Watch TV',duedate: '2024-12-12'},];
+
+    function display(){
+      let result='';
+      for(i=0; i<array.length; i++){
+        const forvalueobject = array[i];
+
+        //const name = forvalueobject.name;
+        //const duedate = forvalueobject.duedate;
+
+        const { name,duedate } = forvalueobject;  
+        
+        const html = `
+          <div class="para">
+            <div>
+              ${name}
+            </div>
+            <div>  
+              sad${duedate}
+            </div>
+             <button onclick =" 
+                array.splice(${i},1);
+                display();
+                " class="deletebutton">Delete
+             </button>
+          </div>
+        `;
+        result+=html
+        console.log(result)
+      }
+      document.querySelector('.valuedisplay')
+        .innerHTML=result
+    }
+
+    add = ()=>{
+      const valueset = document.querySelector('.searchbar')
+      const duedate = document.querySelector('.date')
+      const valueadd= valueset.value
+      const dateadd= duedate.value
+      array.push({name: valueadd,
+                 duedate: dateadd},)
+      display();
+    }
+  </script>
+  <style>
+    
+   .addbutton , .deletebutton{
+    background-color: green;   
+    color: white;
+    padding: 8px 30px; 
+   }
+   .deletebutton{
+      background-color: red;
+    }
+    .searchbar , .date{
+      padding: 8px;
+    }
+    .date{
+      margin-left: 10px;
+    }
+    .para{
+      display: grid;
+      grid-template-columns: 200px 130px 100px;
+      padding-top: 20px;
+    }
+  </style>
+  </body>
+</html>

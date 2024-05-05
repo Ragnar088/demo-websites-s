@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO list</title>
+  </head>
+  <body>
+    <p>ToDo List</p>
+    <input placeholder="ToDo Name" class="searchbar">
+    <input type="date" class="date">
+    <button onclick="add()">Add</button>
+    <div class="displayresult"></div>
+<script>
+  const result = ['derik','quber'];
+
+function displaynew(){
+  let newresult = ' ';
+  for (i = 0; i<result.length; i++){
+    const display = result[i];
+    const html = `
+    <p>${display}
+      <button onclick="
+      newresult.splice(${i}, 1);
+      add();
+      ">Delete</button>
+    </p>`;
+    newresult+=html 
+    console.log(newresult)
+}
+
+document.querySelector('.displayresult')
+.innerHTML = newresult;
+}
+
+  function add(){
+    const word = document.querySelector('.searchbar')
+    const date = document.querySelector('.date')
+    const name = word.value;
+    result.push(name)
+    console.log(result)
+    displaynew()
+  }
+ 
+</script>
+  </body>
+</html>

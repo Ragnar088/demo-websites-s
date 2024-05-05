@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clone</title>
+  </head>
+  <body>
+    <p>
+      Rock Paper Scissors
+    </p>
+
+      <button onclick="
+      const leo = newmode();
+          let result = ' ';
+         
+
+
+        if(compurtmath === 'Rock'){
+          result='Draw';
+        }
+        else if(compurtmath === 'Paper'){
+          result='You Lose';
+        }
+        else if(compurtmath === 'Scissors'){
+          result='You Win';
+        }
+        alert(`you choose rock and computer choose ${compurtmath} and ${result}`)
+        
+        ">Rock</button>
+<script>
+
+  function newmode(){
+    const randomnumber = Math.random();
+      let compurtmath=' ';
+     
+
+        if (randomnumber >= 0 && randomnumber < 1/3){
+            compurtmath = 'Rock' ;
+
+        }else if(randomnumber >= 1/3 && randomnumber < 2/3){
+          compurtmath = 'Paper' ;
+
+        }else if (randomnumber >= 2/3 && randomnumber < 1){
+          compurtmath = 'Scissors' ;
+        } 
+       
+         console.log(compurtmath);
+         return leo;
+
+  }
+  newmode();
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Calculator</title></head>
+  <body>
+    <p>Enter the Number</p>
+    <input type="number" class="num1">
+    <input  type="number" class="num2">
+    <button onclick="dalue('add')">Add</button>
+    <button onclick="dalue('sub')">Sub</button>
+    <button onclick="dalue('mul')">Mul</button>
+    <button onclick="dalue('div')">div</button>
+    <p>The Result is</p>
+    <p class="para">0</p>
+
+<script>
+function dalue(place){
+  let result=""
+  const demo = document.querySelector(".num1")
+  const demo1 = document.querySelector(".num2")
+  const number =Number(demo.value)
+  const number1= Number(demo1.value)
+  if(place === 'add'){
+    result = number + number1;
+    console.log(result)
+  }else if(place === 'sub'){
+    result = number - number1
+  }else if(place === 'mul'){
+    result = number*number1
+  }else if(place === 'div'){
+    result = number/number1
+  }
+    document.querySelector(".para").innerHTML=result
+ }
+ 
+
+</script>
+</body>
+</html>

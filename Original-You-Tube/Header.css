@@ -1,0 +1,77 @@
+
+.header{
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: static;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 60px;
+  background-color: white;
+  z-index: 100;
+}
+.left{
+ display: flex;
+  width: 200px;
+  align-items: center; 
+  
+}
+.harm{
+  width: 23px;
+  margin-left: 20px;
+  margin-right: 26px;
+}
+.youtube{
+  width: 90px;
+}
+.middle{
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  align-items: center;
+}
+.search{
+  height: 30px;
+  width: 400px;
+  font-family: arial;
+  color: gray;
+}
+.searchnew{
+  width: 26px;
+  margin-left: -1px;
+}
+.search::placeholder{
+  font-family: arial;
+  font-size: 16px; 
+}
+.mic-1{
+  width: 40px;
+  border-radius: 30px;
+  border-width: 1px;
+  border: none;
+}
+.live{
+  width: 26px;
+  margin-right: 30px;
+}
+.right{
+ 
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+.box{
+  width: 26px;
+  margin-right: 26px;
+}
+.notification{
+  width: 26px;
+  margin-right: 25px;
+}
+.minilogo{
+  width: 30px;
+  margin-left: -10px;
+}

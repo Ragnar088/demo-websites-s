@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM project</title>
+  </head>
+  <body>
+
+    <p>You Tube Subscribe Button </p>
+
+    <button onclick=
+    "changeword();"
+    class="changeword subbutton">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost Of Order" class="calculate">
+
+    <button class="new4"onkeydown="
+    enterkey(event);
+  ">Calculate</button>
+    <p class="new"></p>
+
+  <style>
+    body{
+      font-family: arial;;
+    }
+    .subbutton{
+      border: none;
+      background-color: black;
+      font-size: bold;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+    .new3{
+      background-color: gray;
+      color: black;
+    }
+    .calculate{
+      padding: 8px;
+    }
+    .new4{
+      background-color: green;
+      color: white;
+      padding: 8px 10px;
+    }
+  </style>
+
+  <script>
+
+    function calculatenrew(){
+      const cal = document.querySelector('.calculate')
+      let newcal = Number(cal.value);
+        if(newcal > 40 ){
+          newcal = newcal + 10   
+        }
+        console.log(newcal)
+        document.querySelector('.new')
+     .innerHTML = `$${newcal}`
+    }
+  
+
+  function changeword(){
+    let word = document.querySelector('.changeword')
+ 
+    if (word.innerText === 'Subscribe' ){
+      word.innerHTML = 'Subscribed'
+        word.classList.add('new3')
+    }else {
+        word.innerHTML = 'Subscribe'
+        word.classList.remove('new3')
+    }
+  
+   }
+
+   function enterkey(event){
+    if(event.key === 'Enter'){
+      calculatenrew();
+    }
+   }
+   
+    </script>
+ </body>
+</html>

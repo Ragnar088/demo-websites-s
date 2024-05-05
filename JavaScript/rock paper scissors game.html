@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NEw game try</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+
+     ownmove('Rock');
+    "
+    >Rock</button>
+    <button onclick="
+
+    ownmove('Paper');
+    
+    ">Paper</button>
+    <button onclick="
+    
+     ownmove('Scissors');
+
+    ">Scissors</button>
+    <button>Reset Score</button>
+    <p><u class="click-here">Click here</u> to see the finl version of the project </p>
+    <style>
+      .click-here{
+        color: rgb(96, 96, 164);
+        cursor: pointer;
+      }
+    </style>
+    <script>
+         function ownmove(place){
+          let choose = computermove();
+          let result = '';
+          if(place === 'Rock'){
+              if(choose === 'Rock'){
+              result = 'Tie'
+            } else if (choose === 'Paper'){
+              result = 'You lose'
+            }else if (choose === 'Scissors'){
+              result = 'You Win'
+            }
+          }else if(place === 'Paper'){
+              if(choose === 'Paper'){
+              result = 'Tie'
+            } else if (choose === 'Rock'){
+              result = 'You win'
+            }else if (choose === 'Scissors'){
+              result = 'You lose'
+            }
+          }else if (place === 'Scissors'){
+              if(choose === 'Scissors'){
+              result = 'Tie'
+            } else if (choose === 'Rock'){
+              result = 'You Lose'
+            }else if (choose === 'Paper'){
+              result = 'You win'
+            }
+          }
+          alert(`you choose ${place} computer choose ${choose} and result is ${result}`)
+
+
+         
+         }
+
+         function computermove(){
+              const computerchoose = Math.random();
+              let choose = '';
+              if(computerchoose >=0 && computerchoose <1/3){
+                choose = 'Rock'
+              }else if(computerchoose>=1/3 && computerchoose<2/3){
+                choose = 'Paper'
+              }else if(computerchoose>=2/3 && computerchoose < 1){
+                choose = 'Scissors'
+              }
+              return choose;
+         }
+
+    </script>
+  </body>
+</html>

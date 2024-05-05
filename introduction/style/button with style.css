@@ -1,0 +1,59 @@
+.demo-one
+   {
+    background-color: rgb(240, 120, 35);
+    color: rgb(255, 255, 255);
+    border: none;
+    height: 36px;
+    width: 102px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: opacity 0.20s;
+  }
+  .demo-one:hover{
+    opacity: 0.8;
+  }
+  .demo-one:active{
+    opacity: 0.5;
+  }
+
+
+     .demo-sec
+     {
+    background-color: white;
+    color: rgb(1, 1, 7);
+    border-color: rgb(1, 1, 79);
+    border-style: solid;
+    height: 35px;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s , color 1s;
+     }
+     .demo-sec:hover{
+      background-color: rgb(1, 1, 79);
+      color: white;
+     }
+     .demo-sec:active{
+      background-color: rgb(1, 1, 79);
+      color: white;
+     }
+
+        .three
+         {
+        background-color:  rgb(94, 94, 255);
+         color: white;
+         border: none;
+          height: 30px;
+          width: 55px;
+          border-radius: 100px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: box-shadow 0.15;          
+
+          }
+          
+        .three:hover{
+          box-shadow: 5px 5px 10px  rgba(0 , 0, 0, 0.15);
+ 
+        }
+          
